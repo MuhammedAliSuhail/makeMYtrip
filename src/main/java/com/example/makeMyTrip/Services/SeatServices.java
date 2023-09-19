@@ -20,24 +20,24 @@ private SeatRepository seatRepository;
 private TransportRepository transportRepository;
 public String addSeat(addFlightseatsDTO  addFlightseatsDTO) {
 
-//    Transport T = transportRepository.findById(addFlightseatsDTO.getTransportId()).get();
-//
-//
-//    for (int i = 0; i < addFlightseatsDTO.getNoOfEconamySeats(); i++) {
-//        Seats seat = Seats.builder().SeatNo(String.valueOf(i)).seattype(seatType.Econamy)
-//                .price(addFlightseatsDTO.getPriceOfEconnamySeat()).transport(T).build();
-//
-//        T.getSeatList().add(seat);
-//
-//    }
-//
-//
-//    for (int i = 0; i < addFlightseatsDTO.getNoOFBussinesSeats(); i++) {
-//        Seats seat = Seats.builder().SeatNo(String.valueOf(i)).seattype(seatType.Buissnes)
-//                .price(addFlightseatsDTO.getPriceOfBusinessSeat()).transport(T).build();
-//        T.getSeatList().add(seat);
-//    }
-//transportRepository.save(T);
+    Transport T = transportRepository.findById(addFlightseatsDTO.getTransportId()).get();
+
+
+    for (int i = 0; i < addFlightseatsDTO.getNoOfEconamySeats(); i++) {
+        Seats seat = Seats.builder().SeatNo(String.valueOf(i)).seattype(seatType.Econamy)
+                .price(addFlightseatsDTO.getPriceOfEconnamySeat()).transport(T).build();
+
+        T.getSeatList().add(seat);
+
+    }
+
+
+    for (int i = 0; i < addFlightseatsDTO.getNoOFBussinesSeats(); i++) {
+        Seats seat = Seats.builder().SeatNo(String.valueOf(i)).seattype(seatType.Buissnes)
+                .price(addFlightseatsDTO.getPriceOfBusinessSeat()).transport(T).build();
+        T.getSeatList().add(seat);
+    }
+transportRepository.save(T);
     return "seats save succssfully";
 }
 

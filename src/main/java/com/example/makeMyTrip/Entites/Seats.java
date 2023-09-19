@@ -32,5 +32,4 @@ public class Seats {
     private Transport transport;
 
 
-
 }
