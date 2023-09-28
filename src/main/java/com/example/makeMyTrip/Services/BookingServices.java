@@ -27,8 +27,8 @@ private TransportService transportService;
 @Autowired
 private TransportRepository transportRepository;
 
-@Autowired
-    private Users users;
+//@Autowired
+//    private Users users;
 
 public List<AvailableResposeDTO> getAvailableSeats(getAvailableSeatDto getAvailableSeatDto){
 

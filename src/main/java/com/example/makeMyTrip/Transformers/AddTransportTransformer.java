@@ -11,7 +11,7 @@ public class AddTransportTransformer {
 
         Transport tarnsport=Transport.builder().modeoftransport(addTransportDTO.getModeoftransport())
                 .CmpanyName(addTransportDTO.getCmpanyName()).journyDate(addTransportDTO.getJournyDate())
-                .journyTime(addTransportDTO.getJournyTime()).journystrats(addTransportDTO.getJournystrats())
+                .journyTime(addTransportDTO.getJournyStarts()).journystrats(addTransportDTO.getJournyTime1())
                 .build();
 
         return tarnsport;

@@ -11,9 +11,11 @@ public class AddTransportDTO {
     private ModeOfTransport modeoftransport;
 
     private LocalDate journyDate;
-    private LocalTime journyTime;
+    private LocalTime journyStarts;
 
     private String CmpanyName;
 
-    private double journystrats;
+    private double journyTime1;
+    private Integer routeId;
+
 }
